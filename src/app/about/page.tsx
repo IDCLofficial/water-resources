@@ -22,6 +22,8 @@ export default function AboutUs() {
                 imgSrc="/images/waterteam.png"
                 altText="Our Story - Imo State Ministry of Water Resources conference event"
             />
+            
+            <MissionVisionCard />
             {/* Commissioner Section */}
             <CommissionerSection
                 imageSrc="/images/commisioner.png"
@@ -32,7 +34,6 @@ export default function AboutUs() {
                 buttonText="Learn More"
                 
             />
-            <MissionVisionCard />
             {/* Objectives Section */}
             <ObjectivesSection />
             {/* Structures Section */}
