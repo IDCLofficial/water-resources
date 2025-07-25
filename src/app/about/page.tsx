@@ -5,6 +5,7 @@ import { StructuresSection } from "@/components/StructuresSection";
 import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
 import { TopHero } from "@/components/TopHero";
+import MissionVisionCard from "@/components/DigitalNews";
 
 export default function AboutUs() {
     return (
@@ -31,6 +32,7 @@ export default function AboutUs() {
                 buttonText="Learn More"
                 
             />
+            <MissionVisionCard />
             {/* Objectives Section */}
             <ObjectivesSection />
             {/* Structures Section */}
