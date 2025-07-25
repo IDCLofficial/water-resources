@@ -27,7 +27,7 @@ export default function Home() {
         label="ABOUT US"
         title="Our Mandate —"
         subheading="Ministry of Water Resources"
-        description="Welcome to the Imo State Ministry of Water Resources.\nAs a key driver of public health and economic transformation, our Ministry plays a critical role in positioning Imo State as a leader in sustainable water management. In a time of climate adaptation and resource stewardship, we are committed to fostering clean water access, attracting investment in water infrastructure, and creating jobs through a robust policy framework and forward-thinking leadership.\n\nEstablished through the restructuring of former water, environment, and natural resource departments, this Ministry brings focus to the vast opportunities in Imo’s water landscape—rivers, lakes, groundwater, and more.\n"
+        description="Welcome to the Imo State Ministry of Water Resources. As a key driver of public health and economic transformation, our Ministry plays a critical role in positioning Imo State as a leader in sustainable water management. In a time of climate adaptation and resource stewardship, we are committed to fostering clean water access, attracting investment in water infrastructure, and creating jobs through a robust policy framework and forward-thinking leadership.Established through the restructuring of former water, environment, and natural resource departments, this Ministry brings focus to the vast opportunities in Imo’s water landscape—rivers, lakes, groundwater, and more."
         buttonText="Discover More"
         image1="/images/water1.png"
         image2="/images/water2.png"

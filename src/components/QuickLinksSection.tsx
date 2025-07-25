@@ -18,7 +18,7 @@ const links = [
     title: "News",
     description: "See our water initiatives and success stories.",
     image: "/images/waterteam.png",
-    href: "/media",
+    href: "/news",
   },
   {
     title: "Departments",
