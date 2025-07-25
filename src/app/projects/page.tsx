@@ -13,8 +13,7 @@ export default function Projects() {
           
             {/* SkillUp Project */}
             <OngoingProjects />
-            {/* Digital section */}
-            <DigitalAgendaSection />
+           
             <CTASection
         heading="Join Imo's Clean Water Revolution!"
         subtext="Be part of our mission for safe, sustainable, and accessible water for every community."
