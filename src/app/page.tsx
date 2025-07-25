@@ -1,7 +1,6 @@
 import AboutMandateSection from "@/components/AboutMandateSection";
 import HeroSection from "@/components/HeroSection";
 import CommissionerSection from "@/components/CommissionerSection";
-import Image from "next/image";
 import QuickLinksSection from "@/components/QuickLinksSection";
 import SkillUpSection from "@/components/SkillUpSection";
 import LatestNewsSection from "@/components/LatestNewsSection";

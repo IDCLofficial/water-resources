@@ -1,5 +1,4 @@
 import React from "react";
-import MediaSearchBar from "./MediaSearchBar";
 
 interface MediaHeroSectionProps {
   title: string;

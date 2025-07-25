@@ -41,7 +41,7 @@ export const ObjectivesSection = () => {
                 {/* Imo State Ministry of Industry, Mines, and Solid Minerals Objectives */}
                 <div className="mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-[43px] font-medium text-center mb-12">
-                    Objectives of Imo State's Ministry of Water Resources
+                    Objectives of Imo State&apos;s Ministry of Water Resources
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {objectives.map((objective, index) => (

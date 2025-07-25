@@ -40,7 +40,7 @@ export default function NewsDetailPage() {
 {/* Main Content */}
 <div>
   <p className="text-gray-700 mb-6">
-    The Imo State Ministry of Water Resources has successfully commissioned the Oguta Water Dam, a landmark project aimed at improving access to clean and reliable water for thousands of residents. This initiative is part of the state government's commitment to sustainable water management and community well-being.
+    The Imo State Ministry of Water Resources has successfully commissioned the Oguta Water Dam, a landmark project aimed at improving access to clean and reliable water for thousands of residents. This initiative is part of the state government&apos;s commitment to sustainable water management and community well-being.
   </p>
   <p className="text-gray-700 mb-6">
     The new dam will not only provide potable water to rural and urban communities but also support agricultural activities and local industries. The Ministry, under the leadership of the Honourable Commissioner, has prioritized water infrastructure upgrades, water quality testing, and the expansion of water supply networks across Imo State.

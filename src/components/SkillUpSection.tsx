@@ -5,7 +5,7 @@ export default function SkillUpSection() {
     <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 py-8 px-4">
       {/* Left: Green Card */}
      <div className="w-[90%] md:w-[40%]">
-        <img src="/images/waterteam.png" alt="SkillUp Imo " />
+        <Image src="/images/waterteam.png" alt="SkillUp Imo" width={600} height={400} className="w-full h-auto rounded-xl" />
      </div>
       {/* Right: Text and Buttons */}
       <div className="w-[90%] md:w-[55%] flex-1 flex flex-col justify-center items-start max-w-2xl px-2">

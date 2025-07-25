@@ -41,7 +41,7 @@ row2: [
               Our Structure
           </h2>
           <p className="text-white text-[1rem] mb-16 w-[40%] mx-auto">
-              The Ministry is divided into specialized departments that collectively drive Imo's water resources management and public health agenda.
+              The Ministry is divided into specialized departments that collectively drive Imo&apos;s water resources management and public health agenda.
           </p>
 
           {/* Main Image */}
