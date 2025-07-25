@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'News', href: '/news' },
-  { label: 'Units', href: '/departments' },
+  { label: 'Departments', href: '/departments' },
   { label: 'Events', href: '/events' },
   { label: 'Media', href: '/media' },
   { label: 'Contact Us', href: '/contact-us' },
