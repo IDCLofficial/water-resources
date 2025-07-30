@@ -7,7 +7,7 @@ const events = [
     location: "OWERRI, IMO STATE",
     title: "Mining Stakeholders Forum",
     description: "A forum bringing together miners, regulators, and community leaders to discuss best practices, compliance, and sustainable mining in Imo State. Includes panel discussions, Q&A, and networking opportunities.",
-    img: "/images/monsm-news1.jpg",
+    img: "/images/monsm-news2.webp",
     details: `This event will feature keynote addresses from top government officials, technical sessions on mining regulations, and interactive workshops on sustainable mining practices. Attendees will have the opportunity to network with industry leaders and participate in breakout sessions focused on community engagement and environmental stewardship.`,
     dateString: "2025-10-20T09:00:00"
   },
@@ -34,19 +34,11 @@ const events = [
     location: "IMO STATE ENVIRONMENTAL AGENCY",
     title: "Environmental Compliance Day",
     description: "A day dedicated to promoting environmental best practices in mining and industry, with training sessions on compliance, remediation, and monitoring.",
-    img: "/images/stock6.jpg",
+    img: "/images/dam.jpeg",
     details: `The event will feature training sessions on environmental compliance, case studies on remediation projects, and panel discussions on the future of sustainable industry in Imo State. Environmental experts and government officials will be available for consultations.`,
     dateString: "2025-10-23T12:00:00"
   },
-  {
-    date: "OCTOBER 24, 2025",
-    location: "OWERRI, IMO STATE",
-    title: "Women in Mining & Industry Summit",
-    description: "A summit celebrating and empowering women in the mining and industrial sectors, featuring keynote speakers, mentorship sessions, and networking.",
-    img: "/images/heroImage.png",
-    details: `This summit will bring together women leaders from across the mining and industrial sectors for keynote speeches, mentorship sessions, and networking opportunities. The event will highlight the achievements of women in the industry and provide resources for career development.`,
-    dateString: "2025-10-24T13:00:00"
-  },
+ 
 ];
 
 function slugify(text: string) {
