@@ -6,6 +6,7 @@ import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
 import { TopHero } from "@/components/TopHero";
 import MissionVisionCard from "@/components/DigitalNews";
+import TeamPage from "./Team";
 
 export default function AboutUs() {
     return (
@@ -25,16 +26,7 @@ export default function AboutUs() {
             
             <MissionVisionCard />
             {/* Commissioner Section */}
-            <CommissionerSection
-                imageSrc="/images/commisioner.png"
-                imageAlt="Hon. Ozo Obinna Francis Ogwuegbu, Commissioner of Water Resources"
-                title="Hon. Ozo Obinna Francis Ogwuegbu"
-                bio="Hon. Ozo Obinna Francis Ogwuegbu, hailing from Ihitte Clan in Imo State, serves as the Honourable Commissioner for Water Resources. He oversees water supply, sanitation, and hygiene initiatives, working to ensure clean and sustainable water access for all citizens."
-                details="Under his leadership, the Imo State Government has revitalized the Otammiri Water Headworks, providing clean water to rural areas after 28 years of neglect. Commissioner Ogwuegbu is committed to advancing public health, water infrastructure, and sustainable resource management across Imo State."
-                buttonText="Learn More"
-                
-            />
-            {/* Objectives Section */}
+            <TeamPage/>
             <ObjectivesSection />
             {/* Structures Section */}
             <StructuresSection
