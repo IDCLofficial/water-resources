@@ -19,7 +19,7 @@ const teamMembers = [
 
 export default function TeamPage() {
   return (
-    <section className="w-full min-h-screen bg-[#f4f8f9] py-16 flex flex-col items-center">
+    <section className="w-full bg-[#f4f8f9] py-16 flex flex-col items-center">
       <h1 className="text-3xl md:text-5xl font-bold mb-8 text-gray-900">Our Team</h1>
       <div className="flex flex-wrap justify-center gap-8 mb-12">
         {teamMembers.map((member, idx) => (
@@ -36,9 +36,7 @@ export default function TeamPage() {
           </div>
         ))}
       </div>
-      <Link href="/" className="px-7 py-3 bg-green-600 text-white rounded text-sm font-semibold shadow hover:bg-green-700 transition">
-        <button>Back to Home</button>
-      </Link>
+      
     </section>
   );
 } 
