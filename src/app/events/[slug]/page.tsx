@@ -4,23 +4,24 @@ import Image from "next/image";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import { TopHero } from "@/components/TopHero";
 
 const event = {
-  title: "Imo State Mining Stakeholders Conference 2025",
-  img: "/images/monsm-news1.jpg",
-  date: "20 October 2025",
-  time: "9:00 am - 4:00 pm",
-  organizer: "Ministry of Industry, Mines, and Solid Minerals, Imo State",
-  phone: "+234 803 123 4567",
+  title: "Imo State Water Infrastructure Development Summit 2025",
+  img: "/images/dam.jpeg",
+  date: "25 November 2025",
+  time: "10:00 am - 3:00 pm",
+  organizer: "Ministry of Water Resources, Imo State",
+  phone: "080-XXXX-XXXX",
   address: "Owerri Conference Center, Imo State",
   description:
-    "The Imo State Mining Stakeholders Conference 2025 brings together miners, regulators, community leaders, and investors to discuss the future of mining in Imo State. The conference will feature keynote addresses from top government officials, technical sessions on mining regulations, and interactive workshops on sustainable mining practices. Attendees will have the opportunity to network with industry leaders, participate in breakout sessions focused on community engagement and environmental stewardship, and learn about the latest innovations in mining technology. The event aims to foster collaboration, promote best practices, and ensure that mining activities contribute positively to the state's economy while protecting the environment.",
+    "The Imo State Water Infrastructure Development Summit 2025 brings together water experts, community leaders, policymakers, and international partners to address the critical need for sustainable water infrastructure. The summit will feature keynote addresses from government officials and water management experts, interactive workshops on water conservation strategies, quality management, and infrastructure development, as well as panel discussions on community engagement and sustainable water practices. Attendees will have the opportunity to network, share experiences, and collaborate on actionable solutions to improve water access and management in Imo State. The event aims to raise awareness, foster partnerships, and empower communities to create a more sustainable water future for all residents.",
 };
 
 const speakers = Array(4).fill({
-  name: "JAPHET GILBERT",
+  name: "Hon. Commissioner Water Resources",
   role: "Lead Speaker",
-  img: "/images/commissioner2.png",
+  img: "/images/commissioner.png",
 });
 
 function Countdown({ targetDate }: { targetDate: string }) {
@@ -73,6 +74,12 @@ function Countdown({ targetDate }: { targetDate: string }) {
 
 export default function EventDetailPage() {
   return (
+    <>
+    <TopHero
+      ministryName="Ensuring Sustainable Water Access and Management for Imo State"
+      titleLabel="Events"
+    />
+    
     <div className="bg-white">
       {/* Hero Title */}
       <section className="relative w-full h-[220px] flex items-center justify-center bg-gradient-to-br from-green-900/80 to-black/80">
@@ -114,13 +121,14 @@ export default function EventDetailPage() {
           ))}
         </div>
       </section>
-      <CTASection
-      heading="Ready to Experience the New Imo?"
-      subtext="Discover our vision for an inclusive, empowered, and connected state."
+     <CTASection
+      heading="Join Us in Transforming Water Resources Management"
+      subtext="Be part of our mission to ensure sustainable access to clean water and promote effective water resource management for all communities in Imo State."
       buttonLabel="Contact Us"
       buttonHref="/contact-us"
-      />
+     />
       <Footer />
     </div>
+    </>
   );
 } 

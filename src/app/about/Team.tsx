@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const teamMembers = [
   {
-    name: 'Hon. Commissioner ',
-    role: 'Hon. Commissioner Hon. Ozo Obinna Francis Ogwuegbu',
+    name: 'Hon. Ozo Obinna Francis Ogwuegbu',
+    role: 'Commissioner',
     image: '/images/commisioner.png',
     bio: 'Provides visionary leadership and strategic direction for the Ministry of Water Resources in Imo State.'
   },
@@ -27,10 +26,10 @@ export default function TeamPage() {
             key={idx}
             className="bg-white rounded-2xl shadow p-6 flex flex-col items-center w-[280px] border-2 border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-green-600"
           >
-            <div className="relative w-40 h-40 rounded-full overflow-hidden mb-4">
+            <div className="relative w-40 h-40 rounded-full border-4 border-green-600 overflow-hidden mb-4">
               <Image src={member.image} alt={member.name} fill className="object-cover" />
             </div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h2>
+            <h2 className="text-xl text-center font-semibold text-gray-900 mb-1">{member.name}</h2>
             <p className="text-green-700 font-medium mb-2">{member.role}</p>
             <p className="text-gray-700 text-sm mb-2 text-center">{member.bio}</p>
           </div>

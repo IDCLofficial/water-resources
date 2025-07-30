@@ -4,32 +4,33 @@ import Image from "next/image";
 
 const events = [
   {
-    name: "Mining Stakeholders Forum",
-    image: "/images/monsm-news1.jpg",
+    name: "Oguta Water Dam Commissioning Ceremony",
+    image: "/images/dam.jpeg",
     description:
-      "A forum bringing together miners, regulators, and community leaders to discuss best practices, compliance, and sustainable mining in Imo State. Includes panel discussions, Q&A, and networking opportunities."
+      "A landmark event marking the official commissioning of the Oguta Water Dam project. This ceremony celebrates the completion of infrastructure that will provide clean water to thousands of residents and support agricultural activities in Imo State."
   },
   {
-    name: "Industrial Parks Launch",
-    image: "/images/building.png",
-    description: "Official launch event for new industrial parks across Imo State, featuring site tours, investor presentations, and government policy briefings."
+    name: "Community Water Conservation Workshop",
+    image: "/images/waterteam.png",
+    description: "An educational workshop held in collaboration with local communities to promote water conservation practices, sustainable water management, and the importance of protecting water resources for future generations."
   },
   {
-    name: "Revenue Digitization Workshop",
-    image: "/images/monsm-news2.webp",
-    description: "A hands-on workshop focused on the implementation of digital revenue collection systems in the mining and industrial sectors, in partnership with the Imo State Internal Revenue Service (IIRS)."
+    name: "Rural Water Access Initiative Launch",
+    image: "/images/water1.png",
+    description: "The official launch of a comprehensive initiative to expand clean water access to underserved rural communities across Imo State, featuring borehole construction and community water management training."
   },
   {
-    name: "Environmental Compliance Day",
-    image: "/images/stock6.jpg",
-    description: "A day dedicated to promoting environmental best practices in mining and industry, with training sessions on compliance, remediation, and monitoring."
+    name: "Water Quality Testing Awareness Campaign",
+    image: "/images/water2.png",
+    description: "A statewide campaign to raise awareness about water quality standards, testing procedures, and the importance of safe drinking water. Includes demonstrations and community engagement activities."
   },
   {
-    name: "Women in Mining & Industry Summit",
-    image: "/images/heroImage.png",
-    description: "A summit celebrating and empowering women in the mining and industrial sectors, featuring keynote speakers, mentorship sessions, and networking."
+    name: "World Water Day Celebration",
+    image: "/images/water3.png",
+    description: "Annual celebration of World Water Day featuring educational programs, community outreach, and policy discussions focused on sustainable water management and universal access to clean water in Imo State."
   },
 ];
+
 
 export default function EventsTabsSection() {
   const [activeIdx, setActiveIdx] = useState(0);

@@ -1,11 +1,10 @@
 import { SectionHero } from "@/components/SectionHero";
 import { ObjectivesSection } from "@/components/ObjectivesSection";
-import CommissionerSection from "@/components/CommissionerSection";
 import { StructuresSection } from "@/components/StructuresSection";
 import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
 import { TopHero } from "@/components/TopHero";
-import MissionVisionCard from "@/components/DigitalNews";
+import MissionVisionCard from "@/components/MissionVisionCard";
 import TeamPage from "./Team";
 
 export default function AboutUs() {

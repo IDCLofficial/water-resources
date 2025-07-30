@@ -1,6 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface NewsItem {
+  title: string;
+  description: string;
+  date: string;
+  image: string;
+  category: string;
+}
+
+interface NewsGridProps {
+  news: NewsItem[];
+}
+
 function slugify(text: string) {
   return text
     .toLowerCase()
@@ -8,31 +20,10 @@ function slugify(text: string) {
     .replace(/(^-|-$)+/g, '');
 }
 
-const newsList = [
-  {
-    title: "Imo Commissioner for Water Resources, Ogwuegbu, Commissions Ezeakpala Water Supply Scheme",
-    description: "Hon. Ozo Obinna Francis Ogwuegbu, the Imo State Commissioner for Water Resources, has commissioned the Ezeakpala Water Supply Scheme, providing clean water to thousands of residents and marking a major milestone in the state's water infrastructure revitalization efforts.",
-    date: "29th May 2024",
-    image: "/images/water1.png",
-  },
-  {
-    title: "Imo State House of Assembly Supports Water and Sanitation Initiatives",
-    description: "The Imo State House of Assembly has pledged its support to the Ministry of Water Resources to improve water supply and sanitation services. The Assembly’s Committee on Water Resources met with ministry officials to discuss strategies for expanding access to clean water and ending open defecation.",
-    date: "11th June 2024",
-    image: "/images/water2.png",
-  },
-  {
-    title: "Imo State Partners with World Bank on SURWASH Program",
-    description: "The Ministry of Water Resources has entered into a strategic partnership with the World Bank to implement the Sustainable Urban/Rural Water Supply, Sanitation, and Hygiene (SURWASH) program, aiming to improve water and sanitation services across Imo State.",
-    date: "11th November 2024",
-    image: "/images/water3.png",
-  },
-];
-
-export default function NewsGrid() {
+export default function NewsGrid({ news }: NewsGridProps) {
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {newsList.map((item, idx) => (
+      {news.map((item, idx) => (
         <Link
           key={idx}
           href={`/news/${slugify(item.title)}`}

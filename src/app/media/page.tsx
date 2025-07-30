@@ -69,6 +69,7 @@ export default function MediaPage() {
         backgroundImage="/images/waterteam.png"
         searchBar={<MediaSearchBar placeholder="Search media..." onSearch={setSearch} />}
       />
+      
       <section className="w-full max-w-7xl mx-auto py-12 px-4">
         <div className="mt-8">
           {filteredItems.length === 0 ? (

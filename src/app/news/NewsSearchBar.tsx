@@ -6,22 +6,22 @@ import Link from "next/link";
 // Move newsList here or import from a shared location
 const newsList = [
   {
-    title: "Imo Commissioner for Water Resources, Ogwuegbu, Commissions Ezeakpala Water Supply Scheme",
-    description: "Hon. Ozo Obinna Francis Ogwuegbu, the Imo State Commissioner for Water Resources, has commissioned the Ezeakpala Water Supply Scheme, providing clean water to thousands of residents and marking a major milestone in the state's water infrastructure revitalization efforts.",
-    date: "29th May 2024",
-    image: "/images/water1.png",
+    title: "Imo Commissioner For Industry, Mines, And Solid Minerals, Ibejiako, Vows To Reform Mining Sector",
+    description: "Rt.Hon. Barr. Ernest Ibejiako, the Imo State Commissioner for Industry, Mines, and Solid Minerals, has pledged to restore sanity and tackle the challenges facing the mining sector. He made this commitment during a maiden stakeholders’ meeting with miners in Imo State over the weekend.",
+    date: "30th May 2025",
+    image: "/images/monsm-news1.jpg",
   },
   {
-    title: "Imo State House of Assembly Supports Water and Sanitation Initiatives",
-    description: "The Imo State House of Assembly has pledged its support to the Ministry of Water Resources to improve water supply and sanitation services. The Assembly’s Committee on Water Resources met with ministry officials to discuss strategies for expanding access to clean water and ending open defecation.",
-    date: "11th June 2024",
-    image: "/images/water2.png",
+    title: "The Imo State House of Assembly has pledged its support to the Ministry of Industry, Mines and Solid Minerals to put an end to illegal mining activities in the state.",
+    description: "It also promised to help strengthen the sector and enhance its proficiency through legislative support.The commitment was made when the Assembly’s Committee on Commerce and Industry interfaced with officials of the Ministry of Industry, Mines and Solid Minerals, led by the commissioner of the ministry, Ernest Ibejiako.",
+    date: "30th May 2025",
+    image: "/images/monsm-news2.webp",
   },
   {
-    title: "Imo State Partners with World Bank on SURWASH Program",
-    description: "The Ministry of Water Resources has entered into a strategic partnership with the World Bank to implement the Sustainable Urban/Rural Water Supply, Sanitation, and Hygiene (SURWASH) program, aiming to improve water and sanitation services across Imo State.",
-    date: "11th November 2024",
-    image: "/images/water3.png",
+    title: "IIRS AND MINISTRY OF INDUSTRY, MINES AND SOLID MINERALS UNITE TO BOOST REVENUE",
+    description: "The Chairman of the Imo State Internal Revenue Service (IIRS), Mr. Justice Okoye, and his team visited the Commissioner for Industry, Mines and Solid Minerals, Rt. Hon. Chief Ibejiako Ifeanyi Ernest on Tuesday 12th November 2024.",
+    date: "30th May 2025",
+    image: "/images/monsm-news.jpg",
   },
 ];
 
