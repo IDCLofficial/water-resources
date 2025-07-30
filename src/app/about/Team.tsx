@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const teamMembers = [
   {
-    name: 'Hon. Commissioner Lady Nkechi Ugwu',
-    role: 'Hon. Commissioner',
+    name: 'Hon. Commissioner ',
+    role: 'Hon. Commissioner Hon. Ozo Obinna Francis Ogwuegbu',
     image: '/images/commisioner.png',
     bio: 'Provides visionary leadership and strategic direction for the Ministry of Water Resources in Imo State.'
   },
