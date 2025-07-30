@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: 'Mr. Godson Okeoma',
     role: 'Permanent Secretary',
-    image: '/images/women2.jpg',
+    image: '/images/white.png',
     bio: 'Oversees administrative operations and ensures effective policy implementation.'
   },
  
