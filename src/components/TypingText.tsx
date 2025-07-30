@@ -6,7 +6,7 @@ const sentences = [
     "Imo is 3R",
     "Clean Water for Imo State",
     "Ensuring Sustainable Water Management",
-    "Enhancing Community Well"
+    "Enhancing Community Well Being"
 ];
 
 export function TypingText() {
