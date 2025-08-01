@@ -42,7 +42,7 @@ export default function HeroSection({
         </AnimatedSection>
         <AnimatedSection delay={0.3} yOffset={100}>
           <h1
-            className="animate-fadeInUpDynamic text-[30px] sm:text-[40px] xl:text-[62px] font-extrabold text-white leading-tight mb-4 mt-4"
+            className="animate-fadeInUpDynamic text-[30px] xl:text-[40px] 2xl:text-[62px] font-extrabold text-white leading-tight mb-4 mt-4"
           >
             {heading}<br />
             {subheading}<br />
