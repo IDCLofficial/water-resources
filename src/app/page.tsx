@@ -16,7 +16,7 @@ export default function Home() {
      
       {/* hero section */}
       <HeroSection
-        backgroundImage="/images/Homehero.jpg"
+        backgroundVideo="/video/home.mp4"
         overlayText="Imo State Ministry of Water Resources"
         heading="Empowering Water Management. "
         subheading="Harnessing Water Resources. "
