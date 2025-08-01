@@ -72,7 +72,7 @@ body {
   display: inline-block;
   white-space: nowrap;
   animation: scrollTextLoop 20s linear infinite;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: white;
 }
