@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedSection from "./AnimatedSection";
 
 const news = [
   {
@@ -26,6 +27,7 @@ export default function LatestNewsSection() {
   return (
     <section className="w-full py-12 px-4 flex flex-col items-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">Latest News</h2>
+      <AnimatedSection> 
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl justify-center mb-8">
         {news.map((item, idx) => (
           <div
@@ -50,6 +52,7 @@ export default function LatestNewsSection() {
           </div>
         ))}
       </div>
+      </AnimatedSection>
       <Link href="/news">
         <button className="bg-green-700 animate-bounce hover:bg-green-800 text-white font-semibold px-12 py-3 rounded text-lg transition-colors">See More</button>
       </Link>
