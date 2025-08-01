@@ -17,7 +17,7 @@ export const TopHero = ({ ministryName, titleLabel }: TopHeroProps) => {
             </div>
             <div className="relative z-10 flex justify-center mt-4">
                 <div className="w-full sm:w-[80%] md:w-[60%] flex flex-col items-center text-center">
-                    <h1 className="text-2xl sm:text-3xl md:text-[3rem] font-bold text-white leading-tight">
+                    <h1 className="text-2xl sm:text-3xl 2xl:text-[3rem] font-bold text-white leading-tight">
                          {ministryName}
                     </h1>
                 </div>
