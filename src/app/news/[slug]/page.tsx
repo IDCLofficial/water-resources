@@ -40,10 +40,10 @@ export default function NewsDetailPage() {
           {/* Main Content */}
           <div>
             <p className="text-gray-700 mb-6">
-              The Honourable Commissioner for Water Resources, Imo State, has officially commissioned the Oguta Water Dam project, marking a significant milestone in the state's water infrastructure development. The dam will provide clean water to thousands of residents and support agricultural activities across the region.
+              The Honourable Commissioner for Water Resources, Imo State, has officially commissioned the Oguta Water Dam project, marking a significant milestone in the state&apos;s water infrastructure development. The dam will provide clean water to thousands of residents and support agricultural activities across the region.
             </p>
             <p className="text-gray-700 mb-6">
-              This achievement is part of the state government's broader strategy to ensure sustainable water access and improved sanitation. The dam is designed not only to serve residential needs but also to boost irrigation and support farming communities in Imo State.
+              This achievement is part of the state government&apos;s broader strategy to ensure sustainable water access and improved sanitation. The dam is designed not only to serve residential needs but also to boost irrigation and support farming communities in Imo State.
             </p>
 
             <div className="w-full flex justify-center my-8">
@@ -65,14 +65,14 @@ export default function NewsDetailPage() {
                   <li>Official commissioning of the Oguta Water Dam by the Honourable Commissioner.</li>
                   <li>Access to clean water for thousands of residents in Oguta and neighboring areas.</li>
                   <li>Support for agricultural irrigation and enhanced food production.</li>
-                  <li>Strengthening of the state’s long-term water sustainability strategy.</li>
+                  <li>Strengthening of the state&apos;s long-term water sustainability strategy.</li>
                   <li>Boost to public health through clean water supply and improved hygiene.</li>
                 </ul>
               </div>
               <div className="flex-1 flex items-center">
                 <blockquote className="border-l-4 border-green-600 pl-4 italic text-gray-800">
                   <span className="font-bold">
-                    “The commissioning of this dam is more than an infrastructure win—it's a victory for every Imo citizen who deserves safe, accessible water.”
+                    &ldquo;The commissioning of this dam is more than an infrastructure win—it&apos;s a victory for every Imo citizen who deserves safe, accessible water.&rdquo;
                   </span>
                 </blockquote>
               </div>
