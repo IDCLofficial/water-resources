@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const sentences = [
     "Imo is 3R",
     "Clean Water for Imo State",
-    "Ensuring Sustainable Water Management",
+    "Water Sanitation for Imo",
     "Enhancing Community Well Being"
 ];
 
