@@ -42,7 +42,7 @@ row2: [
           <h2 className="text-[43px] font-medium text-white">
               Our Structure
           </h2>
-          <p className="text-white text-[1rem] mb-16 w-[40%] mx-auto">
+          <p className="text-white text-[1rem] mb-16 w-[98%] lg:w-[40%] mx-auto">
               The Ministry is divided into specialized departments that collectively drive Imo&apos;s water resources management and public health agenda.
           </p>
 

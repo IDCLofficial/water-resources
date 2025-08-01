@@ -15,11 +15,11 @@ export default function ContactUsPage() {
         titleLabel="Contact Us"
       />
       <section className="w-full mx-auto py-20 px-12 flex flex-col gap-10">
-        <div className="flex flex-col lg:flex-row gap-8 relative">
+        <div className="flex flex-col xl:flex-row gap-8 relative">
           <div className="flex-1">
             <ContactInfoSection />
           </div>
-          <div className="flex-1 flex justify-center items-start lg:absolute lg:right-0 lg:z-5">
+          <div className="flex-1 flex justify-center items-start xl:absolute xl:right-0 xl:z-5">
             <ContactFormSection />
           </div>
         </div>

@@ -16,7 +16,7 @@ export const SectionHero = ({ aboutText, imgSrc, altText }: SectionHeroProps) =>
                         <h2 className="text-2xl sm:text-3xl md:text-[43px] font-medium text-black mb-4 sm:mb-8">
                             About the Ministry of Water Resources
                         </h2>
-                        <p className="text-dark-primary-body text-base sm:text-[1rem] leading-7 sm:leading-8">
+                        <p className="text-dark-primary-body text-base xl:text-[1rem] leading-7 sm:leading-8">
                             {aboutText}
                         </p>
                     </div>
