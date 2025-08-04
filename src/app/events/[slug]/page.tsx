@@ -7,16 +7,15 @@ import { useEffect, useState } from "react";
 import { TopHero } from "@/components/TopHero";
 
 const event = {
-  title: "Imo State Water Infrastructure Development Summit 2025",
+  title: "Oguta Water Dam Commissioning Ceremony",
+  description: "Official commissioning of the Oguta Water Dam project to boost water supply for domestic, agricultural, and industrial use in Imo State.",
   img: "/images/dam.jpeg",
   date: "25 November 2025",
   time: "10:00 am - 3:00 pm",
   organizer: "Ministry of Water Resources, Imo State",
   phone: "080-XXXX-XXXX",
-  address: "Owerri Conference Center, Imo State",
-  description:
-    "The Imo State Water Infrastructure Development Summit 2025 brings together water experts, community leaders, policymakers, and international partners to address the critical need for sustainable water infrastructure. The summit will feature keynote addresses from government officials and water management experts, interactive workshops on water conservation strategies, quality management, and infrastructure development, as well as panel discussions on community engagement and sustainable water practices. Attendees will have the opportunity to network, share experiences, and collaborate on actionable solutions to improve water access and management in Imo State. The event aims to raise awareness, foster partnerships, and empower communities to create a more sustainable water future for all residents.",
-};
+  address: "Oguta , Imo State",
+}
 
 const speakers = Array(4).fill({
   name: "Hon. Commissioner Water Resources",
