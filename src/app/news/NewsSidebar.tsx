@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { newsList } from "./newsData";
-
+import Link from "next/link";
 interface NewsSidebarProps {
   selectedCategory: string | null;
   setSelectedCategory: (cat: string | null) => void;
@@ -12,6 +12,13 @@ const categories = [
 ];
 
 const popularNews = newsList;
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
+
 
 export default function NewsSidebar({ selectedCategory, setSelectedCategory }: NewsSidebarProps) {
   return (
@@ -42,6 +49,11 @@ export default function NewsSidebar({ selectedCategory, setSelectedCategory }: N
         <ul className="space-y-4">
           {popularNews.map((news, idx) => (
             <li key={idx}>
+               <Link
+          key={idx}
+          href={`/news/${slugify(news.title)}`}
+          className="bg-white overflow-hidden flex flex-col hover:shadow-md transition cursor-pointer"
+        >
               <div className="flex gap-3 items-center group hover:text-green-700 transition-colors w-full">
                 <div className="w-14 h-14 relative rounded overflow-hidden">
                   <Image src={news.image} alt={news.title} fill className="object-cover" />
@@ -51,6 +63,7 @@ export default function NewsSidebar({ selectedCategory, setSelectedCategory }: N
                   <div className="text-[10px] text-gray-500 mt-1">{news.date}</div>
                 </div>
               </div>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
-
+import Link from "next/link";
 const latestNews = [
   {
    
@@ -17,6 +17,7 @@ export default function NewsDetailPage() {
       {/* Section 1: Hero + Body */}
       <section className="relative w-full pb-[180px]">
         <NewsHeroSection />
+     
         <NewsBodySection>
           {/* Title & Meta */}
           <div className="relative z-10 w-full flex justify-center pb-2">
@@ -90,7 +91,16 @@ export default function NewsDetailPage() {
 
       {/* Section 2: Latest News */}
       <div className="w-full bg-[#181c23] py-10">
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="m-10 ">
+
+<Link
+href="/news"
+className="my-6 px-4 py-2 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-lg shadow transition"
+>
+See Other News
+</Link>
+</div>
+        {/* <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-white text-xl font-semibold mb-6">LATEST NEWS</h2>
           <div className="flex flex-col md:flex-row gap-6">
             {latestNews.map((item, idx) => (
@@ -105,7 +115,7 @@ export default function NewsDetailPage() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Section 3: Footer (if needed) */}

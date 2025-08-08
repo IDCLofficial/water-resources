@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import React from "react";
 
 const services = [
@@ -42,8 +43,10 @@ const services = [
 
 const ServiceCard = ({ title, description }: { title: string; description: string;}) => (
  <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col h-full border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+   <AnimatedSection>
     <h3 className="text-lg font-bold text-green-700 mb-2">{title}</h3>
     <p className="text-gray-700 text-sm flex-1 mb-3">{description}</p>
+    </AnimatedSection>
   </div>
 );
 

@@ -20,7 +20,7 @@ const mediaItems = [
   {
     image: "/images/waterteam.png",
     title: "Water Quality Testing Initiative in Imo State",
-    isVideo: true,
+    isVideo: false,
   },
   {
     image: "/images/usaid.png",
@@ -30,7 +30,7 @@ const mediaItems = [
   {
     image: "/images/worldbank.png",
     title: "World Bank Supported Water Project Launch",
-    isVideo: true,
+    isVideo: false,
   },
   {
     image: "/images/initiatives.png",

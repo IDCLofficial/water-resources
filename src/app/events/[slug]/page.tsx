@@ -17,11 +17,11 @@ const event = {
   address: "Oguta , Imo State",
 }
 
-const speakers = Array(4).fill({
+const speakers = [{
   name: "Hon. Commissioner Water Resources",
   role: "Lead Speaker",
-  img: "/images/commissioner.png",
-});
+  img: "/images/commisioner.png",
+}];
 
 function Countdown({ targetDate }: { targetDate: string }) {
   const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number}>({days: 0, hours: 0, minutes: 0, seconds: 0});
@@ -47,27 +47,27 @@ function Countdown({ targetDate }: { targetDate: string }) {
   }, [targetDate]);
 
   return (
-    <div className="bg-green-700 text-white rounded-lg px-8 py-4 flex gap-6 items-center text-center w-max mt-4 mb-6 md:mb-0 md:absolute md:bottom-6 md:right-10 shadow-lg">
-      <div>
-        <div className="text-2xl font-bold">{timeLeft.days}</div>
-        <div className="text-xs uppercase">Days</div>
-      </div>
-      <div className="text-2xl font-bold">:</div>
-      <div>
-        <div className="text-2xl font-bold">{timeLeft.hours}</div>
-        <div className="text-xs uppercase">Hours</div>
-      </div>
-      <div className="text-2xl font-bold">:</div>
-      <div>
-        <div className="text-2xl font-bold">{timeLeft.minutes}</div>
-        <div className="text-xs uppercase">Minutes</div>
-      </div>
-      <div className="text-2xl font-bold">:</div>
-      <div>
-        <div className="text-2xl font-bold">{timeLeft.seconds}</div>
-        <div className="text-xs uppercase">Seconds</div>
-      </div>
+    <div className="bg-green-700 text-white rounded-lg px-4 md:px-8 py-4 flex gap-6 items-center text-center w-[96%] md:w-max mt-4 mb-6 md:mb-0 md:absolute md:bottom-6 md:right-10 shadow-lg">
+    <div>
+      <div className="text-sm md:text-2xl font-bold">{timeLeft.days}</div>
+      <div className="text-xs uppercase">Days</div>
     </div>
+    <div className="text-sm md:text-2xl font-bold">:</div>
+    <div>
+      <div className="text-sm md:text-2xl font-bold">{timeLeft.hours}</div>
+      <div className="text-xs uppercase">Hrs</div>
+    </div>
+    <div className="text-sm md:text-2xl font-bold">:</div>
+    <div>
+      <div className="text-sm md:text-2xl font-bold">{timeLeft.minutes}</div>
+      <div className="text-xs uppercase">Mins</div>
+    </div>
+    <div className="text-sm md:text-2xl font-bold">:</div>
+    <div>
+      <div className="text-sm md:text-2xl font-bold">{timeLeft.seconds}</div>
+      <div className="text-xs uppercase">Secs</div>
+    </div>
+  </div>
   );
 }
 

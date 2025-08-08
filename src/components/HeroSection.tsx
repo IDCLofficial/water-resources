@@ -32,7 +32,7 @@ export default function HeroSection({
       <div className="absolute inset-0 bg-black/60 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 w-[96%] md:w-[100%] mx-auto px-6 flex flex-col items-start">
+      <div className="relative z-20 w-[97%] md:w-[100%] mx-auto px-6 flex flex-col items-start">
         <AnimatedSection>
           <div
             className="px-8 py-3 animate-fadeInUpDynamic flex justify-center text-xs lg:text-xl items-center bg-white text-gray-900 rounded-full font-semibold shadow-lg min-h-12"

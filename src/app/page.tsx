@@ -38,7 +38,7 @@ export default function Home() {
         imageSrc="/images/commisioner.png"
         imageAlt="Hon. Ozo Obinna Francis Ogwuegbu, Commissioner of Water Resources in Imo State"
         title="About The Commissioner"
-        bio="Honourable Ozo Obinna Francis Ogwuegbu hails from Ihitte Clan in Imo State and serves as the Honourable Commissioner for Water Resources. He is responsible for overseeing water supply, sanitation, and hygiene initiatives across the state."
+        bio="Honourable Ozo Obinna Francis Ogwuegbu serves as the Honourable Commissioner for Water Resources. He is responsible for overseeing water supply, sanitation, and hygiene initiatives across the state."
         details="Under his leadership, the Imo State Government has revitalized the Otammiri Water Headworks, providing clean water to rural areas after 28 years of neglect. Commissioner Ogwuegbu is dedicated to ensuring sustainable water management and improving public health through enhanced water infrastructure and services."
         buttonText="Our Team"
       />

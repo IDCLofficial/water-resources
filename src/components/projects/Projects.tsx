@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import AnimatedSection from "../AnimatedSection";
 
 const projects = [
   {
@@ -49,8 +50,10 @@ export default function Projects() {
             <div className="space-y-4">
               {activeProjects.map((project, idx) => (
                 <div key={idx} className="p-4 bg-green-50 rounded-xl border-l-4 border-green-600 shadow-sm">
+                  <AnimatedSection>
                   <h3 className="font-semibold text-lg text-green-800 mb-1">{project.title}</h3>
                   <p className="text-gray-700 text-sm">{project.description}</p>
+                  </AnimatedSection>
                 </div>
               ))}
             </div>
@@ -60,8 +63,10 @@ export default function Projects() {
             <div className="space-y-4">
               {closedProjects.map((project, idx) => (
                 <div key={idx} className="p-4 bg-gray-100 rounded-xl border-l-4 border-gray-400 shadow-sm">
+                  <AnimatedSection>
                   <h3 className="font-semibold text-lg text-gray-700 mb-1">{project.title}</h3>
                   <p className="text-gray-600 text-sm">{project.description}</p>
+                  </AnimatedSection>
                 </div>
               ))}
             </div>
