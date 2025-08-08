@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagra
 const contactInfo = {
   address: "P.M.B 1146 Ugwu Orji, Okigwe Road, Owerri, Imo State.",
   email: "ministryofwater.imo@gmail.com",
-  phone: "+2348077776881",
+  phone: "+2348037181953",
   socials: [
     { icon: <FaFacebookF />, href: "https://www.facebook.com/p/Ministry-of-Water-Resources-Imo-State-61559349176559/" },
     { icon: <FaTwitter />, href: "https://x.com/MinOfWater_Imo" },

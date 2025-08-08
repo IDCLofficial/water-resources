@@ -51,8 +51,8 @@ const info = {
     ],
     contact: [
         {
-            label: "+2348077776881",
-            href: "tel:+2348077776881"
+            label: "+2348037181953",
+            href: "tel:+2348037181953"
         },
         {
             label: "ministryofwater.imo@gmail.com",
