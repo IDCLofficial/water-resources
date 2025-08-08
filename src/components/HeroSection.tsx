@@ -4,7 +4,6 @@ import { TypingText } from './TypingText';
 interface HeroSectionProps {
   overlayText: string;
   heading: string;
-  subheading: string;
   description: string;
   backgroundVideo: string; // updated from backgroundImage
 }
@@ -12,7 +11,6 @@ interface HeroSectionProps {
 export default function HeroSection({
   overlayText,
   heading,
-  subheading,
   description,
   backgroundVideo,
 }: HeroSectionProps) {
@@ -45,7 +43,6 @@ export default function HeroSection({
             className="animate-fadeInUpDynamic text-[30px] xl:text-[40px] 2xl:text-[62px] font-extrabold text-white leading-tight mb-4 mt-4"
           >
             {heading}<br />
-            {subheading}<br />
             <TypingText />
           </h1>
         </AnimatedSection>

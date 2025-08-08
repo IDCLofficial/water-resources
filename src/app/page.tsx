@@ -19,7 +19,6 @@ export default function Home() {
         backgroundVideo="/video/home.mp4"
         overlayText="Imo State Ministry of Water Resources"
         heading="Empowering Water Management. "
-        subheading="Harnessing Water Resources. "
         description="Ensuring sustainable water management, advancing water infrastructure, and empowering Imo citizens — through clean water access, resource protection, and inclusive water policies."
       />
       {/* About Mandate Section */}
