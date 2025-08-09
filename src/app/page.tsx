@@ -8,6 +8,25 @@ import Stats from "@/components/Stats";
 import FeaturedPartners from "@/components/FeaturedPartners";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { client } from '../../lib/contentful'
+
+
+// app/page.js
+
+// export default async function Home() {
+  const ministryRes = await client.getEntries({
+    content_type: 'ministry'
+  });
+
+  const ministries = ministryRes.items;
+
+  // return (
+   
+  // );
+// }
+
+   
+ 
 
 export default function Home() {
   return (
@@ -21,6 +40,15 @@ export default function Home() {
         heading="Empowering Water Management. "
         description="Ensuring sustainable water management, advancing water infrastructure, and empowering Imo citizens — through clean water access, resource protection, and inclusive water policies."
       />
+       {/* <div>
+      <h1>Ministry</h1>
+      {ministries.map((ministry) => (
+        <div key={ministry.sys.id}>
+          <h2>{ministry.fields.ministryName}</h2>
+          <p>{ministry.fields.about}</p>
+        </div>
+      ))}
+    </div> */}
       {/* About Mandate Section */}
       <AboutMandateSection
         label="ABOUT US"
