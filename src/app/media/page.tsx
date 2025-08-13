@@ -24,7 +24,7 @@ export default function MediaPage() {
     const loadMedia = async () => {
       try {
         setIsLoading(true);
-        const data = await fetchMediaData('5MvMOmsmba4t1hx0wzqmiV');
+        const data = await fetchMediaData(process.env.NEXT_PUBLIC_MINISTRY_ID);
         setMediaItems(data);
       } catch (err) {
         console.error('Failed to load media:', err);

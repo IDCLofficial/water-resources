@@ -34,26 +34,26 @@ export interface NewsItem {
 }
 
 // // Function to get and log ministry IDs
-// export const getMinistryIds = async () => {
-//   try {
-//     const ministries = await contentfulService.getMinistries();
-//     console.log('All Ministries:', ministries);
+export const getMinistryIds = async () => {
+  try {
+    const ministries = await contentfulService.getMinistries();
+    console.log('All Ministries:', ministries);
     
-//     // Log each ministry ID
-//     ministries.forEach((ministry, index) => {
-//       console.log(`Ministry ${index + 1} ID:`, ministry.sys?.id || 'No ID found');
-//       console.log(`Ministry ${index + 1} Name:`, ministry.fields?.ministryName || 'No name found');
-//     });
+    // Log each ministry ID
+    ministries.forEach((ministry, index) => {
+      console.log(`Ministry ${index + 1} ID:`, ministry.sys?.id || 'No ID found');
+      console.log(`Ministry ${index + 1} Name:`, ministry.fields?.ministryName || 'No name found');
+    });
     
-//     return ministries;
-//   } catch (error) {
-//     console.error('Error fetching ministry IDs:', error);
-//     return [];
-//   }
-// };
+    return ministries;
+  } catch (error) {
+    console.error('Error fetching ministry IDs:', error);
+    return [];
+  }
+};
 
 // Function to fetch news data from Contentful for a specific ministry
-export const getNewsFromContentful = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV') => {
+export const getNewsFromContentful = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || '') => {
   try {
     const blogs = await contentfulService.getBlogsByMinistry(ministryId);
     
@@ -88,7 +88,7 @@ export const getNewsFromContentful = async (ministryId: string = '5MvMOmsmba4t1h
 // Dynamic newsList that fetches from Contentful
 let cachedNewsList: NewsItem[] | null = null;
 
-export const getNewsList = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV'): Promise<NewsItem[]> => {
+export const getNewsList = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || ''): Promise<NewsItem[]> => {
   if (cachedNewsList) {
     return cachedNewsList;
   }
@@ -105,7 +105,7 @@ export const getNewsList = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV')
 };
 
 // Export dynamic newsList - this will be populated with Contentful data
-export const newsList = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV') => {
+export const newsList = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || '') => {
   return await getNewsList(ministryId);
 };
 

@@ -29,7 +29,7 @@ interface Event {
 }
 
 // Function to fetch events data from Contentful for a specific ministry
-export const getEventsFromContentful = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV') => {
+export const getEventsFromContentful = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || '') => {
   try {
     const events = await contentfulService.getEventsByMinistryId(ministryId);
     
@@ -72,6 +72,6 @@ export const getEventsList = async (ministryId?: string): Promise<Event[]> => {
 };
 
 // Export dynamic eventsList - this will be populated with Contentful data
-export const eventsList = async (ministryId: string = '5MvMOmsmba4t1hx0wzqmiV'): Promise<Event[]> => {
+export const eventsList = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || ''): Promise<Event[]> => {
   return await getEventsList(ministryId);
 };

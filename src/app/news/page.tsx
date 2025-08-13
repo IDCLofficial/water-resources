@@ -18,7 +18,7 @@ export default function NewsPage() {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const news = await getNewsList('5MvMOmsmba4t1hx0wzqmiV');
+        const news = await getNewsList(process.env.NEXT_PUBLIC_MINISTRY_ID);
         setNewsList(news);
       } catch (error) {
         console.error('Error loading news in component:', error);

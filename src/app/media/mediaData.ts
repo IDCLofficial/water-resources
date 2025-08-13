@@ -9,7 +9,7 @@ export interface MediaItem {
 }
 
 // Fetch media data from Contentful
-export const fetchMediaData = async (ministryId: string = "5MvMOmsmba4t1hx0wzqmiV"): Promise<MediaItem[]> => {
+export const fetchMediaData = async (ministryId: string = process.env.NEXT_PUBLIC_MINISTRY_ID || ''): Promise<MediaItem[]> => {
   try {
     const mediaPosts = await contentfulService.getMediaByMinistryId(ministryId) as unknown as MediaPost[];
     
