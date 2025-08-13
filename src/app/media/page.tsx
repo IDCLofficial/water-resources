@@ -1,61 +1,41 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MediaHeroSection from "./MediaHeroSection";
 import MediaGalleryGrid from "./MediaGalleryGrid";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import MediaSearchBar from "./MediaSearchBar";
-const mediaItems = [
-  {
-    image: "/images/dam.jpeg",
-    title: "Commissioning of Oguta Water Dam Project",
-    isVideo: false,
-  },
-  {
-    image: "/images/water1.png",
-    title: "Clean Water Supply to Rural Communities",
-    isVideo: false,
-  },
-  {
-    image: "/images/waterteam.png",
-    title: "Water Quality Testing Initiative in Imo State",
-    isVideo: false,
-  },
-  {
-    image: "/images/usaid.png",
-    title: "USAID Partnership for Water Infrastructure Development",
-    isVideo: false,
-  },
-  {
-    image: "/images/worldbank.png",
-    title: "World Bank Supported Water Project Launch",
-    isVideo: false,
-  },
-  {
-    image: "/images/initiatives.png",
-    title: "Community Water Conservation Campaign",
-    isVideo: false,
-  },
-  {
-    image: "/images/Imo-House-of-Assembly.webp",
-    title: "Policy Dialogue on Water Resource Management",
-    isVideo: false,
-  },
-  {
-    image: "/images/commisioner.png",
-    title: "Commissioner’s Address on Water Sustainability",
-    isVideo: false,
-  },
-  {
-    image: "/images/gwsp.jpeg",
-    title: "Global Water Security Program Launch in Imo State",
-    isVideo: false,
-  },
-];
+import { fetchMediaData } from "./mediaData";
+
+interface MediaItem {
+  image: string;
+  title: string;
+  isVideo: boolean;
+}
 
 export default function MediaPage() {
   const [search, setSearch] = useState("");
+  const [mediaItems, setMediaItems] = useState<MediaItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadMedia = async () => {
+      try {
+        setIsLoading(true);
+        const data = await fetchMediaData('5MvMOmsmba4t1hx0wzqmiV');
+        setMediaItems(data);
+      } catch (err) {
+        console.error('Failed to load media:', err);
+        setError('Failed to load media. Please try again later.');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadMedia();
+  }, []);
 
   const filteredItems = mediaItems.filter(item =>
     item.title.toLowerCase().includes(search.toLowerCase())
@@ -72,9 +52,17 @@ export default function MediaPage() {
       
       <section className="w-full max-w-7xl mx-auto py-12 px-4">
         <div className="mt-8">
-          {filteredItems.length === 0 ? (
+          {isLoading ? (
+            <div className="flex justify-center items-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+            </div>
+          ) : error ? (
+            <div className="text-center text-red-500 text-lg font-semibold py-12">
+              {error}
+            </div>
+          ) : filteredItems.length === 0 ? (
             <div className="text-center text-gray-500 text-lg font-semibold py-12">
-              No results found
+              {search ? 'No results found' : 'No media available'}
             </div>
           ) : (
             <MediaGalleryGrid items={filteredItems} />

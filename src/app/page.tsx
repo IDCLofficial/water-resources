@@ -9,8 +9,6 @@ import FeaturedPartners from "@/components/FeaturedPartners";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
-   
- 
 
 export default function Home() {
   return (
@@ -24,8 +22,7 @@ export default function Home() {
         heading="Empowering Water Management. "
         description="Ensuring sustainable water management, advancing water infrastructure, and empowering Imo citizens — through clean water access, resource protection, and inclusive water policies."
       />
-       
-      {/* About Mandate Section */}
+  
       <AboutMandateSection
         label="ABOUT US"
         title="Our Mandate —"

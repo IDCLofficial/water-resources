@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 const contactInfo = {
   address: "P.M.B 1146 Ugwu Orji, Okigwe Road, Owerri, Imo State.",

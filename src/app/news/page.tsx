@@ -5,16 +5,49 @@ import NewsSearchBar from "./NewsSearchBar";
 import NewsGrid from "./NewsGrid";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { useState } from "react";
-import { newsList } from "./newsData";
+import { useState, useEffect } from "react";
+import { getNewsList, NewsItem } from "./newsData";
 import { TopHero } from "@/components/TopHero";
 
 export default function NewsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [newsList, setNewsList] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        setLoading(true);
+        const news = await getNewsList('5MvMOmsmba4t1hx0wzqmiV');
+        setNewsList(news);
+      } catch (error) {
+        console.error('Error loading news in component:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
 
   const filteredNews = selectedCategory
     ? newsList.filter((item) => item.category === selectedCategory)
     : newsList;
+
+  if (loading) {
+    return (
+      <div className="bg-white">
+        <TopHero
+          ministryName="Transforming Imo's Water"
+          titleLabel="News"
+        />
+        <div className="max-w-7xl mx-auto px-4 py-16 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading news...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white">
@@ -22,11 +55,12 @@ export default function NewsPage() {
 ministryName="Transforming Imo's Water"
 titleLabel="News"
       />
-      <NewsSearchBar />
+      <NewsSearchBar newsList={newsList} />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 px-4 pb-16">
         <NewsSidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
+          newsList={newsList}
         />
         <div className="flex-1">
           {selectedCategory && (

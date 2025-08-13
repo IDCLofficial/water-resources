@@ -10,7 +10,16 @@ if (!hasContentfulConfig) {
   console.warn('Contentful environment variables are missing. Please add NEXT_PUBLIC_CONTENTFUL_SPACE_ID and NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN to your .env.local file.');
 }
 
-export const client = hasContentfulConfig ? createClient({
-  space: spaceId,
-  accessToken: accessToken,
+const client = hasContentfulConfig ? createClient({
+  space: spaceId!,
+  accessToken: accessToken!,
 }) : null;
+
+export default client; 
+
+
+
+// 
+// Ministry 5 ID: 6eQMFsro9zFPuLiwIF0GFW
+// Ministry 5 Name: Water Resources
+//

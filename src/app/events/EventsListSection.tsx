@@ -1,35 +1,21 @@
+'use client'
+
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { getEventsList } from './events';
 
-const events = [
-  {
-    date: "OCTOBER 29, 2025",
-    location: "OGUTA WATER DAM SITE",
-    title: "Oguta Water Dam Commissioning Ceremony",
-    description: "Official commissioning of the Oguta Water Dam project to boost water supply for domestic, agricultural, and industrial use in Imo State.",
-    img: "/images/dam.jpeg",
-    details: `Led by the Honourable Commissioner alongside international partners and community leaders, this landmark ceremony marked the completion of infrastructure that will provide clean water to thousands of residents. The event included technical presentations, community engagement sessions, and future water management planning.`,
-    dateString: "2025-10-29T09:00:00",
-  },
-  {
-    date: "JUNE 15, 2025",
-    location: "GOVERNMENT HOUSE, OWERRI",
-    title: "Water Quality Management Stakeholders Meeting",
-    description: "Engagement with water experts, community leaders, and ministry officials to discuss strategies for improving water quality and supply across Imo State.",
-    img: "/images/waterteam.png",
-    details: `The Permanent Secretary led the meeting, discussing water infrastructure upgrades, quality testing protocols, and collaboration with international partners. Participants agreed on implementing regular water quality monitoring and community education programs.`,
-    dateString: "2025-06-15T10:00:00",
-  },
-  {
-    date: "MAY 27, 2025",
-    location: "RURAL COMMUNITIES ACROSS IMO STATE",
-    title: "Rural Water Access Initiative Launch",
-    description: "A comprehensive initiative to expand clean water access to underserved rural communities through borehole construction and community water management.",
-    img: "/images/water1.png",
-    details: `Commissioner and water experts launched the initiative themed "Water for All." The ministry began construction of boreholes in rural areas and held training sessions on community water management and conservation practices.`,
-    dateString: "2025-05-27T14:00:00",
-  },
-];
+// Interface for Event data
+interface Event {
+  date: string;
+  location: string;
+  title: string;
+  description: string;
+  img: string;
+  details: string;
+  dateString: string;
+  id: string;
+}
 
 function slugify(text: string) {
   return text
@@ -38,11 +24,36 @@ function slugify(text: string) {
     .replace(/(^-|-$)+/g, '');
 }
 
-const now = new Date();
-const upcomingEvents = events.filter(e => new Date(e.dateString) >= now);
-const pastEvents = events.filter(e => new Date(e.dateString) < now);
-
 export default function EventsListSection() {
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const eventsList = await getEventsList();
+        setEvents(eventsList);
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchEvents();
+  }, []);
+  
+  const now = new Date();
+  const upcomingEvents = events.filter(e => new Date(e.dateString) >= now);
+  const pastEvents = events.filter(e => new Date(e.dateString) < now);
+  
+  if (loading) {
+    return (
+      <section className="w-full max-w-6xl mx-auto py-16 px-4">
+        <div className="text-center text-gray-500">Loading events...</div>
+      </section>
+    );
+  }
   return (
     <section className="w-full max-w-6xl mx-auto py-16 px-4">
       {/* Upcoming Events Section */}
@@ -50,7 +61,7 @@ export default function EventsListSection() {
       {upcomingEvents.length > 0 ? (
         <div className="flex flex-col gap-8 mb-16">
           {upcomingEvents.map((event) => (
-            <div key={event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0">
+            <div key={event.id || event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
               </div>
@@ -79,7 +90,7 @@ export default function EventsListSection() {
       {pastEvents.length > 0 ? (
         <div className="flex flex-col gap-8">
           {pastEvents.map((event) => (
-            <div key={event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0 opacity-70">
+            <div key={event.id || event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0 opacity-70">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
               </div>
