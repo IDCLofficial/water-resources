@@ -228,7 +228,15 @@ export default function Footer() {
         </AnimatedSection>
       </div>
         <div className="border-t border-gray-200 text-center py-3 text-xs text-gray-500">
-        Copyright © {new Date().getFullYear()} Imo State Ministry of Water Resources. All rights reserved.  Powered by Imo Digital City
+        Copyright © {new Date().getFullYear()} Imo State Ministry of Water Resources. All rights reserved. Powered by{' '}
+        <a 
+          href="http://imodigitalcity.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-green-600 hover:underline"
+        >
+          Imo Digital City
+        </a>
         </div>
       </footer>
     );
