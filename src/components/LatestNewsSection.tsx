@@ -7,6 +7,15 @@ export default async function LatestNewsSection() {
   // Fetch latest 3 news items
   const news = await getNewsList();
   const latestNews = news.slice(0, 3); // Show only the 3 most recent news items
+  if (!latestNews || latestNews.length === 0) {
+    return (
+      <section className="w-full py-12 px-4 flex flex-col items-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">Latest News</h2>
+        <p className="text-gray-500 text-lg">No news available at the moment. Please check back later.</p>
+      </section>
+    );
+  }
+
   return (
     <section className="w-full py-12 px-4 flex flex-col items-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">Latest News</h2>

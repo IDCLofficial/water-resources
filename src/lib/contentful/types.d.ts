@@ -140,6 +140,56 @@ export interface NewsPost {
     };
 }
 
+export interface ProjectPost {
+    sys: {
+        id: string;
+        type: string;
+        createdAt: string;
+        updatedAt: string;
+    };
+    fields: {
+        projectName: string;
+        slug: string;
+        description: string;
+        startDate: string;
+        endDate?: string;
+        status: 'ongoing' | 'completed' | 'upcoming';
+        location: string;
+        budget?: string;
+        ministry: Ministry;
+        featuredImage?: {
+            sys: {
+                id: string;
+                type: string;
+            };
+            fields: {
+                title: string;
+                description?: string;
+                file: {
+                    url: string;
+                    fileName: string;
+                    contentType: string;
+                };
+            };
+        };
+        gallery?: Array<{
+            sys: {
+                id: string;
+                type: string;
+            };
+            fields: {
+                title: string;
+                description?: string;
+                file: {
+                    url: string;
+                    fileName: string;
+                    contentType: string;
+                };
+            };
+        }>;
+    };
+}
+
 export interface EventPost {
     sys: {
         id: string;

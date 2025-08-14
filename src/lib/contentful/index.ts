@@ -1,5 +1,5 @@
 import client from './client';
-import { NewsPost, Ministry, EventPost, MediaPost } from './types';
+import { NewsPost, Ministry, EventPost, MediaPost, ProjectPost } from './types';
 
 class ContentfulService {
   // Fetch all ministries
@@ -177,9 +177,27 @@ class ContentfulService {
       return [];
     }
   }
-  
+  // Fetch projects by ministry ID
+  async getProjectsByMinistryId(ministryId: string): Promise<ProjectPost[]> {
+    if (!client) {
+      console.warn('Contentful client not initialized. Please check your environment variables.');
+      return [];
+    }
 
- 
+    try {
+      const response = await client.getEntries({
+        content_type: 'projects',
+        'fields.ministry.sys.id': ministryId,
+        include: 2,
+        order: ['-fields.startDate']
+      });
+
+      return response.items as unknown as ProjectPost[];
+    } catch (error) {
+      console.error('Error fetching projects by ministry id:', error);
+      return [];
+    }
+  }
 }
 
 

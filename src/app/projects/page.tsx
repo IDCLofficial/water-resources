@@ -1,7 +1,7 @@
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { TopHero } from "@/components/TopHero";
-import OngoingProjects from "@/components/projects/Projects";
+import OngoingProjects from "./OngoingProjects";
 
 export default function Projects() {
     return (
